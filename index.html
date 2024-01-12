@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#" onclick="selectCalculator('scientific')">Scientific Calculator</a></li>
+    <li><a href="#" onclick="selectCalculator('simple')">Simple Calculator</a></li>
+  </ul>
+</nav>
+
+<div class="header-container">
+  <h1 class="calculator-heading">Calculator</h1>
+  <img src="https://assets-global.website-files.com/61c1a8251c7c762bdbadf2a0/61c1a8251c7c763bc8ae025b_5f2044b0128f70015545e0ba_Calculator%25252520Usage.png" alt="Calculator Image" class="calculator-image">
+</div>
+
+<div id="scientificCalculator">
+  <input type="text" id="display">
+
+
+
+  <button onclick="clearDisplay()" class="operator">AC</button>
+  <button onclick="appendCharacter('sqrt(')" class="operator">√</button>
+  <button onclick="appendCharacter('**2')" class="operator">x²</button>
+  <button onclick="appendCharacter('**')" class="operator">^</button>
+  <br>
+
+  <button onclick="appendCharacter('7')">7</button>
+  <button onclick="appendCharacter('8')">8</button>
+  <button onclick="appendCharacter('9')">9</button>
+  <button onclick="appendCharacter('/')">/</button>
+  <br>
+
+  <button onclick="appendCharacter('4')">4</button>
+  <button onclick="appendCharacter('5')">5</button>
+  <button onclick="appendCharacter('6')">6</button>
+  <button onclick="appendCharacter('*')">*</button>
+  <br>
+
+  <button onclick="appendCharacter('1')">1</button>
+  <button onclick="appendCharacter('2')">2</button>
+  <button onclick="appendCharacter('3')">3</button>
+  <button onclick="appendCharacter('-')">-</button>
+  <br>
+
+  <button onclick="appendCharacter('0')">0</button>
+  <button onclick="appendCharacter('.')">.</button>
+  <button onclick="calculate()">=</button>
+  <button onclick="appendCharacter('+')">+</button>
+  <br>
+  <button onclick="appendCharacter('(')">(</button>
+  <button onclick="appendCharacter(')')">)</button>
+  <button onclick="clearSingle()">CE</button>
+
+  <br>
+  <button onclick="appendCharacter('Math.sin(')" class="operator">sin</button>
+  <button onclick="appendCharacter('Math.cos(')" class="operator">cos</button>
+  <button onclick="appendCharacter('Math.tan(')" class="operator">tan</button>
+</div>
+
+<div id="simpleCalculator" style="display:none;">
+  <input type="text" id="display">
+
+  <button onclick="clearDisplaySimple()" class="operator">AC</button>
+  <br>
+
+  <button onclick="appendCharacterSimple('7')">7</button>
+  <button onclick="appendCharacterSimple('8')">8</button>
+  <button onclick="appendCharacterSimple('9')">9</button>
+  <button onclick="appendCharacterSimple('/')">/</button>
+  <br>
+
+  <button onclick="appendCharacterSimple('4')">4</button>
+  <button onclick="appendCharacterSimple('5')">5</button>
+  <button onclick="appendCharacterSimple('6')">6</button>
+  <button onclick="appendCharacterSimple('*')">*</button>
+  <br>
+
+  <button onclick="appendCharacterSimple('1')">1</button>
+  <button onclick="appendCharacterSimple('2')">2</button>
+  <button onclick="appendCharacterSimple('3')">3</button>
+  <button onclick="appendCharacterSimple('-')">-</button>
+  <button onclick="clearSingle()">CE</button>
+
+  <br>
+
+  <button onclick="appendCharacterSimple('0')">0</button>
+  <button onclick="appendCharacterSimple('.')">.</button>
+  <button onclick="calculateSimple()">=</button>
+  <button onclick="appendCharacterSimple('+')">+</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
